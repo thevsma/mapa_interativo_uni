@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <style>
+        /* Estilo para a imagem do mapa */
+        #mapa {
+            position: relative;
+            width: 13645px; /* Tamanho original */
+            height: 9696px; /* Tamanho original */
+            background-image: url('mapa-unimontes.jpg'); 
+            background-size: contain; /* Ajuste caso precise caber em tela */
+            background-repeat: no-repeat;
+            margin: 0 auto;
+        }
+
+        /* Estilo para os quadrados interativos */
+        .ponto {
+            position: absolute;
+            width: 1096px; /* Tamanho original */
+            height: 1750px; /* Tamanho original */
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* Efeito de zoom ao passar o mouse */
+        .ponto:hover {
+            transform: scale(1.15, 1.15);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Tooltip para as imagens */
+        .ponto::after {
+            content: attr(data-nome);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+        }
+
+        .ponto:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mapa">
+    <a href="https://unimontes.br/" target="_blank">
+        <img src="predio01.png" class="ponto" data-nome="p1" style="top: 590px; left: 8335px;" alt="p1">
+    </a>
+</div>
+
+</body>
+</html>
