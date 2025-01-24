@@ -43,3 +43,14 @@
 .ponto:hover::after {
     opacity: 1;
 }
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('mapa-unimontes-novo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
