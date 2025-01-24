@@ -1,5 +1,6 @@
 const mapContainer = document.querySelector('.map-container');
-const mapBackground = document.querySelector('.map');
+const mapBackground = document.querySelector('.map-background');
+const mapBuilding = document.querySelector('.building');
 
 let scale = 1; // Fator de zoom inicial
 let isDragging = false; // Controle de arraste
@@ -20,7 +21,7 @@ function applyZoom(event) {
     scale = Math.min(Math.max(0.5, scale), 3);
 
     // Aplica o zoom ao mapa
-    mapBackground.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
+    mapContainer.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
 }
 
 // Função para começar o movimento do mapa (drag)
@@ -42,7 +43,7 @@ function dragMap(event) {
         offsetY += dy;
 
         // Aplica o deslocamento do mapa
-        mapBackground.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
+        mapContainer.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
 
         startX = event.clientX;
         startY = event.clientY;
