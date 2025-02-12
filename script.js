@@ -1,6 +1,4 @@
 const mapContainer = document.querySelector('.map-container');
-const mapBackground = document.querySelector('.map-background');
-const mapBuilding = document.querySelector('.building');
 
 let scale = 1; // Fator de zoom inicial
 let isDragging = false; // Controle de arraste
