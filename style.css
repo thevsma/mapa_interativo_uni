@@ -23,17 +23,22 @@
 }
 
 .building{
-    position: fixed;
+    position: absolute;
     z-index: 1;
 }
 
-.building img{
-    width: 100%;
-    height: 100%;
-}
-
-.building:hover img{
+.building:hover{
     transform: scale(1.15);
     transition: transform 150ms ease-in-out;
     cursor:pointer;
+}
+
+.container-img{
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    background-image: url("assets/mapa-unimontes-novo.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
