@@ -1,6 +1,6 @@
 const mapContainer = document.querySelector('.map-container');
 
-let scale = 1; // Fator de zoom inicial
+let scale = 5; // Fator de zoom inicial
 let isDragging = false; // Controle de arraste
 let startX, startY; // Coordenadas iniciais do mouse para o arraste
 let offsetX = 0, offsetY = 0; // Deslocamento do mapa
@@ -16,7 +16,7 @@ function applyZoom(event) {
     }
 
     // Limita o zoom para não ficar muito grande ou pequeno
-    scale = Math.min(Math.max(0.5, scale), 3);
+    scale = Math.min(Math.max(0.5, scale), 5);
 
     // Aplica o zoom ao mapa
     mapContainer.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
