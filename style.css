@@ -27,6 +27,17 @@
     z-index: 1;
 }
 
+.balao{
+    position: absolute;
+    z-index: 2;
+}
+
+.balao:hover{
+    transform: scale(1.15);
+    transition: transform 150ms ease-in-out;
+    cursor:pointer;
+}
+
 .building:hover{
     transform: scale(1.15);
     transition: transform 150ms ease-in-out;
